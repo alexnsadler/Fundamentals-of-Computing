@@ -1,4 +1,4 @@
-### About Project 1 - Degree Distributions for Graphs
+### About Project 1
 
 * Learning Material:
   * Graphs and brute-force algorithms
