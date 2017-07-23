@@ -1,0 +1,2 @@
+### About Algorithmic Thinking Part 1
+In part 1 of this course, we will study the notion of algorithmic efficiency and consider its application to several problems from graph theory.  As the central part of the course, students will implement several important graph algorithms in Python and then use these algorithms to analyze two large real-world data sets.  The main focus of these tasks is to understand interaction between the algorithms and the structure of the data sets being analyzed by these algorithms.
