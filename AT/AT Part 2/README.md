@@ -1,0 +1,2 @@
+### About Algorithmic Thinking Part 2
+In part 2 of this course, we will study advanced algorithmic techniques such as divide-and-conquer and dynamic programming.  As the central part of the course, students will implement several algorithms in Python that incorporate these techniques and then use these algorithms to analyze two large real-world data sets.  The main focus of these tasks is to understand interaction between the algorithms and the structure of the data sets being analyzed by these algorithms.
