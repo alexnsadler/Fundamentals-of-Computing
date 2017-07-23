@@ -1,0 +1,3 @@
+# Algorithmic Thinking
+### About this course
+Experienced Computer Scientists analyze and solve computational problems at a level of abstraction that is beyond that of any particular programming language.  This two-part course builds on the principles that you learned in our Principles of Computing course and is designed to train students in the mathematical concepts and process of "Algorithmic Thinking", allowing them to build simpler, more efficient solutions to real-world computational problems.
