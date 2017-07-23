@@ -110,25 +110,16 @@ class ClickerState:
             self._lst.append((self._current_time, self._item, self._cost, self._total_cookies))
 
 
-#obj = ClickerState()
-#obj.wait(45)
-#obj.buy_item('item', 1.0, 3.5)
-#print obj.get_history()
-
-
 def simulate_clicker(build_info, duration, strategy):
     """
     Function to run a Cookie Clicker game for the given
     duration with the given strategy.  Returns a ClickerState
     object corresponding to the final state of the game.
     """
-    
     obj_bi = build_info
 
     obj_cs = ClickerState()
     
-   
-
     while obj_cs.get_time() <= duration:
         
         #print obj_cs.get_time()
@@ -155,7 +146,6 @@ def simulate_clicker(build_info, duration, strategy):
         
         obj_cs.buy_item(strat, obj_bi.get_cost(strat), obj_bi.get_cps(strat)) # step 5, 6
         obj_bi.update_item(strat)
-        
         
     # Replace with your code
     print (obj_cs.get_history())
@@ -206,8 +196,7 @@ def strategy_cheap(cookies, cps, history, time_left, build_info):
         return None
     return cheapest_item
 
-#print strategy_cheap(0.0, 1.0, [(0.0, None, 0.0, 0.0)], 5.0, provided.BuildInfo({'A': [5000.0, 1.0], 'C': [50000.0, 3.0], 'B': [500.0, 2.0]}, 1.15))
-#print  strategy_cheap(1.0, 3.0, [(0.0, None, 0.0, 0.0)], 17.0, provided.BuildInfo({'A': [5.0, 1.0], 'C': [50000.0, 3.0], 'B': [500.0, 2.0]}, 1.15))
+
 def strategy_expensive(cookies, cps, history, time_left, build_info):
     """
     Always buy the most expensive item you can afford in the time left.
@@ -234,14 +223,14 @@ def strategy_expensive(cookies, cps, history, time_left, build_info):
         #return None
     return most_expensive_item
 
-print strategy_expensive(500000.0, 1.0, [(0.0, None, 0.0, 0.0)], 5.0, provided.BuildInfo({'A': [5.0, 1.0], 'C': [50000.0, 3.0], 'B': [500.0, 2.0]}, 1.15))
-#print strategy_expensive(1.0, 3.0, [(0.0, None, 0.0, 0.0)], 17.0, provided.BuildInfo({'A': [5.0, 1.0], 'C': [50000.0, 3.0], 'B': [500.0, 2.0]}, 1.15))
+
 def strategy_best(cookies, cps, history, time_left, build_info):
     """
     The best strategy that you are able to implement.
     """
     return None
-        
+
+
 def run_strategy(strategy_name, time, strategy):
     """
     Run a simulation for the given time with one strategy.
@@ -254,10 +243,9 @@ def run_strategy(strategy_name, time, strategy):
     # Uncomment out the lines below to see a plot of total cookies vs. time
     # Be sure to allow popups, if you do want to see it
 
-    # history = state.get_history()
-    # history = [(item[0], item[3]) for item in history]
-    # simpleplot.plot_lines(strategy_name, 1000, 400, 'Time', 'Total Cookies', [history], True)
-
+    history = state.get_history()
+    history = [(item[0], item[3]) for item in history]
+    simpleplot.plot_lines(strategy_name, 1000, 400, 'Time', 'Total Cookies', [history], True)
 
     
 def run():
@@ -267,8 +255,8 @@ def run():
     run_strategy("Cursor", SIM_TIME, strategy_cursor_broken)
 
     # Add calls to run_strategy to run additional strategies
-    # run_strategy("Cheap", SIM_TIME, strategy_cheap)
-    # run_strategy("Expensive", SIM_TIME, strategy_expensive)
-    # run_strategy("Best", SIM_TIME, strategy_best)
+    run_strategy("Cheap", SIM_TIME, strategy_cheap)
+    run_strategy("Expensive", SIM_TIME, strategy_expensive)
+    run_strategy("Best", SIM_TIME, strategy_best)
     
 #run()
