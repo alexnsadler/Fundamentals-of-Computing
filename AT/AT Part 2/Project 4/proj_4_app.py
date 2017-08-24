@@ -1,4 +1,4 @@
-"""Provide code, solution, and student written code for Application 4."""
+"""Provided code, solution, and student written code for Application 4."""
 
 import math
 import random
