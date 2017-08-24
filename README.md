@@ -1,4 +1,4 @@
-# Fundamentals-of-Computing
+# Fundamentals of Computing Specialization
 
 ### About This Specialization
 
