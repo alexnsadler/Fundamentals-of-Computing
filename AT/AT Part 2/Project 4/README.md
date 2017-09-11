@@ -1,7 +1,7 @@
 ### About Project 4
 
 * Learning Material:
-  * Alignment of Sequences
+  * Alignment of DNA Sequences
 * Project:
   * Computing Alignments of Sequences
 * Application:
